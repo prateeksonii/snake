@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+body .game-grid {
+  background-color: #303030;
+  height: 100vmin;
+  width: 100vmin;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[30];
+      grid-template-rows: repeat(30, 1fr);
+  -ms-grid-columns: (1fr)[30];
+      grid-template-columns: repeat(30, 1fr);
+}
+
+body .game-grid .snake {
+  background-color: #459c53;
+  border: 0.25vmin solid #fff;
+}
+
+body .game-grid .food {
+  background: url("../assets/fruit.png");
+  background-size: contain;
+}
+/*# sourceMappingURL=style.css.map */
