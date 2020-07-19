@@ -1,7 +1,14 @@
 import { inputDirection } from "./input.js";
 
-export const SNAKE_SPEED = 5;
+// Initial speed of snake
+export let snakeSpeed = 5;
 
+// Function to increase speed
+export const increaseSpeed = () => {
+  snakeSpeed += 0.5;
+};
+
+// Coordinates for snake segments
 export let snakeBody = [{ x: 15, y: 15 }];
 
 let newSegments = 0;
@@ -9,7 +16,7 @@ let newSegments = 0;
 export const update = () => {
   updateSegments();
 
-  console.log(snakeBody);
+  // Move the snake forward
   for (let i = snakeBody.length - 2; i >= 0; i--) {
     snakeBody[i + 1] = { ...snakeBody[i] };
   }
