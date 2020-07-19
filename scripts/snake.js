@@ -52,4 +52,5 @@ export const onSnake = (pos) =>
 
 export const resetSnake = () => {
   snakeBody = [{ x: 15, y: 15 }];
+  snakeSpeed = 5;
 };
